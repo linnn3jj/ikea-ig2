@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    background-color: #fafafa;
+    color: #262626;
+    font-family: Arial, "Noto Sans TC", sans-serif;
+}
+
+
+/* Instagram 上方 */
+
+.topbar {
+    width: 80%;
+    height: 60px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.instagram-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* 貼文 */
+
+.post {
+    width: 600px;
+    max-width: 100%;
+
+    margin: 30px auto;
+
+    background-color: white;
+
+    border: 1px solid #dbdbdb;
+}
+
+
+/* IKEA 帳號 */
+
+.post-header {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 15px;
+}
+
+.profile-picture {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    margin-right: 10px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.account-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.more {
+    margin-left: auto;
+    font-size: 24px;
+}
+
+
+/* 貼文圖片 */
+
+.post-image {
+    width: 100%;
+    background-color: white;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* 按鈕 */
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px 5px; /* 1. 把原本的 14px 改成 16px */
+}
+
+.left-actions {
+    display: flex;
+    gap: 14px;
+}
+
+/* 1. 修改原本的 button 樣式 */
+.post-actions button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;          /* 滑鼠游標變為手型 */
+    display: flex;             /* 讓 SVG 圖標在按鈕內垂直居中 */
+    align-items: center;
+    justify-content: center;
+    color: #000000;           /* 控制 SVG 圖標顏色（預設黑色） */
+    transition: opacity 0.2s;  /* 按下時的平滑過渡 */
+}
+
+/* 2. 新增控制 SVG 大小的樣式 */
+.post-actions button svg {
+    width: 24px;              /* 圖標寬度 */
+    height: 24px;             /* 圖標高度 */
+}
+
+/* 3. 新增懸浮與點擊效果 */
+.post-actions button:hover {
+    opacity: 0.6;             /* 滑鼠移上去稍微變淡 */
+}
+
+.save {
+    margin-left: auto;
+}
+
+
+/* 按讚 (加在 .save 的後面) */
+
+.likes {
+    padding: 5px 16px;        /* 2. 把原本的 15px 改成 16px，跟上面保持一致 */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+/* 文案 */
+
+.caption {
+    padding: 5px 15px 10px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   留言區
+========================= */
+
+.comments {
+    padding: 0 15px 15px;
+}
+
+
+/* 每一則留言 */
+
+.comment {
+    margin-top: 16px;
+    padding: 0;
+}
+
+
+/* 留言內容＋右邊愛心 */
+
+.comment-content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+/* 左邊文字區 */
+
+.comment-text {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* 帳號名稱＋時間 */
+
+.comment-header {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+
+/* 帳號名稱 */
+
+.comment-header strong {
+    font-size: 14px;
+    font-weight: 700;
+    color: #262626;
+}
+
+
+/* 幾天前／幾小時前 */
+
+.comment-time {
+    color: #737373;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+/* 留言文字 */
+
+.comment-body {
+    font-size: 14px;
+  
+    line-height: 1.5;
+    word-break: break-word;
+    color: #262626;
+}
+
+
+/* =========================
+   留言右側愛心
+========================= */
+
+.comment-like {
+    width: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 3px;
+}
+
+
+/* 愛心按鈕 */
+
+.comment-heart {
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    width: 18px;
+    height: 18px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 愛心圖示 */
+
+.comment-heart svg {
+    width: 15px;
+    height: 15px;
+
+    fill: none;
+    stroke: #737373;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================
+   新增留言 
+========================= */
+
+.comment-input {
+    border-top: 1px solid #efefef;
+
+    padding:  15px;
+
+    color: #8e8e8e;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        background-color: white;
+    }
+
+    .topbar {
+        height: 54px;
+        padding: 0 15px;
+    }
+
+    .instagram-logo {
+        font-size: 22px;
+    }
+
+    .post {
+        width: 100%;
+        margin: 0;
+
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    .post-header {
+        height: 58px;
+        padding: 10px 12px;
+    }
+
+    .profile-picture {
+        width: 34px;
+        height: 34px;
+    }
+
+    .post-actions {
+        padding: 9px 12px 4px;
+    }
+
+    .post-actions button {
+        font-size: 25px;
+    }
+
+    .likes {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+  .caption {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.comments {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.comment {
+    margin-top: 18px;
+    padding-left: 0;
+    padding-right: 0;
+}
+}
